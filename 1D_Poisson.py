@@ -2,8 +2,6 @@
 import numpy as np 
 import scipy as sp
 import matplotlib.pyplot as plt
-import scipy as spcot
-import numpy as np
 
 def solver_FE_1D_Poisson():
     # basis_type_trial == 101 :1D linear
@@ -43,10 +41,14 @@ def assemble_matrix_1D():
     pass
 
 
-def Gauss_quadrature_1D_trial_test():
+def Gauss_quadrature_1D_trial_test(coeff_func):
     int_value = 0
 
     for k in range(Gpn):
-        int_value += Gauss_weights[k] * 
+        int_value += Gauss_weights[k] * map(coeff_func, Gauss_nodes[k]) *FE_basis_func_1D *
 
     pass
+
+
+def function_c():
+
