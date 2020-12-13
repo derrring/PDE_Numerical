@@ -2,7 +2,7 @@
 import numpy as np 
 import scipy as sp
 import matplotlib.pyplot as plt
-import scipy as sp
+import scipy as spcot
 import numpy as np
 
 def solver_FE_1D_Poisson():
@@ -12,7 +12,7 @@ def solver_FE_1D_Poisson():
         Pb = []
         Tb = []
     elif basis_type_trial == 102:
-
+        pass
     boundarynodes = generate_boundarynodes()
 
     A = assemble_matrix_1D()
@@ -38,5 +38,15 @@ def assemble_matrix_1D():
             for beta in range(num_local_basis_func_test):
 
                 int_value = Gauss_quadrature_1D_trial_test
+
                 T(i,j) += int_value
+    pass
+
+
+def Gauss_quadrature_1D_trial_test():
+    int_value = 0
+
+    for k in range(Gpn):
+        int_value += Gauss_weights[k] * 
+
     pass
